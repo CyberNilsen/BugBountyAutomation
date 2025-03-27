@@ -6,13 +6,20 @@
         xmlns:local="clr-namespace:BugBountyAutomation"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
-        <Label Content="Target URL:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="111,37,0,0"/>
-        <TextBox Name="TargetInput" HorizontalAlignment="Center" Height="25" VerticalAlignment="Top" Width="400" Margin="0,37,0,0"/>
+    <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
+        <Grid>
 
-        <Button Content="Run Dirsearch" Name="DirsearchBtn" Click="RunDirsearch" HorizontalAlignment="Left" Margin="29,187,0,197"/>
+            <Label Content="Target URL:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="111,37,0,0"/>
+            <TextBox Name="TargetInput" HorizontalAlignment="Center" Height="25" VerticalAlignment="Top" Width="400" Margin="0,37,0,0"/>
 
-        <TextBox Name="OutputBox" HorizontalAlignment="Center" Height="250" VerticalAlignment="Center" Width="550" TextWrapping="Wrap" AcceptsReturn="True"/>
-    </Grid>
+            <Label Content="Threads (optional):" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="72,76,0,0"/>
+            <TextBox Name="ThreadsInput" HorizontalAlignment="Center" Height="25" VerticalAlignment="Top" Width="400" Margin="0,77,0,0"/>
+
+            <Button Content="Run Dirsearch" Name="DirsearchBtn" Click="RunDirsearch" HorizontalAlignment="Left" Margin="40,167,0,217"/>
+
+            <Button Content="Launch Shell Command" Name="LaunchShellBtn" Click="LaunchShellCommand" HorizontalAlignment="Left" Margin="17,260,0,108" Width="124" FontSize="10"/>
+
+            <TextBox Name="OutputBox" HorizontalAlignment="Center" Height="231" VerticalAlignment="Top" Width="508" TextWrapping="Wrap" AcceptsReturn="True" Margin="0,145,0,0"/>
+        </Grid>
+    </ScrollViewer>
 </Window>
