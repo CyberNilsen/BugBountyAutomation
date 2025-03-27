@@ -25,7 +25,7 @@ public partial class MainWindow : Window
             return;
         }
 
-        string scriptPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Main", "dirsearch_scan.py");
+        string scriptPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "..","..", "..","Main", "dirsearch_scan.py");
 
         if (!File.Exists(scriptPath))
         {

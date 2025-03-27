@@ -2,7 +2,7 @@ import sys
 import subprocess
 import os
 
-# Define Dirsearch location
+
 DIRSEARCH_PATH = os.path.join(os.path.dirname(__file__), "..", "Tools", "dirsearch", "dirsearch.py")
 
 def run_dirsearch(target):
@@ -13,7 +13,7 @@ def run_dirsearch(target):
     try:
         print(f"[+] Scanning {target} with Dirsearch...\n")
         
-        # Run Dirsearch
+       
         result = subprocess.run(["python", DIRSEARCH_PATH, "-u", target, "-e", "js,php,html,txt"], capture_output=True, text=True)
 
         print(result.stdout)
